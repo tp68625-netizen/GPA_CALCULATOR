@@ -67,12 +67,12 @@
         }
 
         .section {
-            min-height: 100vh;
+            min-height: auto;
+            padding: 100px 15px 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 80px 20px 40px;
             position: relative;
             border-bottom: 1px solid var(--border-color);
         }
@@ -114,8 +114,7 @@
             align-items: center;
             transition: transform 0.3s ease;
             text-decoration: none;
-            position: absolute;
-            bottom: 30px;
+            margin-top: 20px;
         }
 
         .down-btn:hover {
@@ -336,8 +335,21 @@
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .navbar { top: 10px; right: 10px; left: 10px; justify-content: center; }
+            .hero-title { font-size: 2.2rem; }
+            .navbar { 
+                top: 10px; 
+                right: 10px; 
+                left: 10px; 
+                justify-content: center;
+                padding: 6px;
+            }
+            .nav-btn {
+                padding: 6px 10px;
+                font-size: 0.75rem;
+            }
+            .card {
+                padding: 20px 15px;
+            }
             .module-row { flex-direction: column; align-items: stretch; }
             .sub-credit, .sub-grade, .btn-del { flex: 1; }
         }
@@ -467,7 +479,7 @@
         <a href="#sec-syllabus" class="down-btn">↓</a>
     </section>
 
-    <!-- 6. Full Degree Syllabus Viewer Section (Final Section) -->
+    <!-- 6. Full Degree Syllabus Viewer Section -->
     <section id="sec-syllabus" class="section">
         <div class="card">
             <h2>Full Degree Syllabus (All Modules)</h2>
@@ -496,7 +508,6 @@
                         </tr>
                     </thead>
                     <tbody id="fullSyllabusTableBody">
-                        <!-- Full Degree Syllabus populated via JS -->
                     </tbody>
                 </table>
             </div>
